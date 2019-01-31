@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">  <!-- had to add the xmlsns bit to let Intellij know it should conform to thymeleaf standards -->
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}">Default Title</h1>  <!-- Thymeleaf syntax in the h1 -->
+
+<nav th:replace="fragments :: navigation"></nav>
+<br />
+<p th:unless="${recipe} and ${recipes.size()}" >No Recipe To Display</p>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Ingredients</th>
+    </tr>
+    <tr th:each="recipe : ${recipes}">
+        <td th:text="${recipe.name}"></td>
+        <td th:text="${recipe.description}"></td>
+        <td th:text="${recipe.ingredients}"></td>
+    </tr>
+</table>
+</body>
+</html>
