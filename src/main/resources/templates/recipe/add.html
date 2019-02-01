@@ -2,19 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">  <!-- had to add the xmlsns bit to let Intellij know it should conform to thymeleaf standards -->
 <head th:replace="fragments :: head"></head>
 <body>
-<h1 th:text="${title}">Default Title</h1>  <!-- Thymeleaf syntax in the h1 -->
+    <h1 th:text="${title}">Default Title</h1>  <!-- Thymeleaf syntax in the h1 -->
 
-<nav th:replace="fragments :: navigation"></nav>
+    <nav th:replace="fragments :: navigation"></nav>
 
-<form method="post">
-    <br />
-    <label for="recipeName">Recipe Name</label>
-    <input id="recipeName" type="text" name="recipeName" />
-    <label for="recipeScript">Description</label>
-    <input id="recipeScript" type="text" name="recipeDescription" />
-    <label for="recipeGredients">Ingredients</label>
-    <input id="recipeGredients" type="text" name="recipeIngredients" />
-    <input type="submit" value="Add Recipe" />
-</form>
+    <form method="post">
+        <br />
+        <label for="recipeName">Recipe Name</label>
+        <input id="recipeName" type="text" name="recipeName" />
+        <label for="recipeScript">Description</label>
+        <input id="recipeScript" type="text" name="recipeDescription" />
+        <label for="recipeGredients">Ingredients</label>
+        <input id="recipeGredients" type="text" name="recipeIngredients" />
+        <input type="submit" value="Add Recipe" />
+    </form>
 </body>
 </html>
